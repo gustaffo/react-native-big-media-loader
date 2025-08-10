@@ -1,4 +1,4 @@
-package com.yourorg.bigmedialoader
+package com.gustaffo.bigmedialoader
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

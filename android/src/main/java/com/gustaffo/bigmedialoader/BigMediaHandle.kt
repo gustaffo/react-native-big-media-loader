@@ -1,4 +1,4 @@
-package com.yourorg.bigmedialoader
+package com.gustaffo.bigmedialoader
 
 import android.net.Uri
 import android.content.ContentResolver

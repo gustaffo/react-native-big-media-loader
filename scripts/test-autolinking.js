@@ -25,12 +25,12 @@ const tests = [
   },
   {
     name: 'iOS podspec exists',
-    test: () => fs.existsSync('ios/BigMediaLoader.podspec'),
+    test: () => fs.existsSync('react-native-big-media-loader.podspec'),
     fix: 'Create iOS podspec file'
   },
   {
     name: 'Android source directory exists',
-    test: () => fs.existsSync('android/src/main/java/com/yourorg/bigmedialoader'),
+    test: () => fs.existsSync('android/src/main/java/com/gustaffo/bigmedialoader'),
     fix: 'Create Android source directory structure'
   },
   {

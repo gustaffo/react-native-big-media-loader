@@ -28,6 +28,12 @@ npm run test:coverage
 node scripts/test-manual.js
 ```
 
+### 5. Test Autolinking Configuration
+
+```bash
+npm run test:autolinking
+```
+
 ## 📋 Test Commands
 
 | Command | Description |
@@ -38,6 +44,7 @@ node scripts/test-manual.js
 | `npm run test:unit` | Run only unit tests |
 | `npm run test:integration` | Run only integration tests |
 | `node scripts/test-manual.js` | Run manual tests |
+| `npm run test:autolinking` | Test autolinking configuration |
 
 ## 🧪 What's Tested
 

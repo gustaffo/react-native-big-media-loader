@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-  namespace "com.yourorg.bigmedialoader"
+  namespace "com.gustaffo.bigmedialoader"
   compileSdkVersion 34
 
   defaultConfig {

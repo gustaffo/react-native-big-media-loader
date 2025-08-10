@@ -24,15 +24,36 @@ yarn add react-native-big-media-loader
 
 ### 2. Autolinking Setup
 
-This library supports React Native autolinking (React Native 0.60+). No additional setup is required for most projects.
+This library supports React Native autolinking (React Native 0.60+). The library will be automatically linked, but you'll need to install the native dependencies.
 
 #### iOS
 - The library will be automatically linked via CocoaPods
-- Run `cd ios && pod install` after installation if needed
+- **Required**: Run `cd ios && pod install` to install the native dependencies
+- This step is always required after installing any React Native library with native code
 
 #### Android
 - The library will be automatically linked
 - No additional configuration required
+
+#### Installation Steps:
+```bash
+# 1. Install the package
+yarn add react-native-big-media-loader
+# or
+npm install react-native-big-media-loader
+
+# 2. For iOS - Install pods (required)
+cd ios && pod install
+
+# 3. Clean and rebuild (recommended)
+# iOS: cd ios && xcodebuild clean
+# Android: cd android && ./gradlew clean
+
+# 4. Restart Metro bundler
+npx react-native start --reset-cache
+# or
+yarn start --reset-cache
+```
 
 ### 3. Manual Linking (if needed)
 

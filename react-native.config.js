@@ -2,7 +2,7 @@ module.exports = {
   dependency: {
     platforms: {
       ios: {
-        podspec: 'ios/BigMediaLoader.podspec',
+        podspec: 'react-native-big-media-loader.podspec',
       },
       android: {
         sourceDir: 'android',
