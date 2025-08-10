@@ -22,23 +22,58 @@ npm install react-native-big-media-loader
 yarn add react-native-big-media-loader
 ```
 
-### 2. iOS Setup
+### 2. Autolinking Setup
 
-For iOS, the library uses CocoaPods. Add this to your `ios/Podfile`:
+This library supports React Native autolinking (React Native 0.60+). No additional setup is required for most projects.
+
+#### iOS
+- The library will be automatically linked via CocoaPods
+- Run `cd ios && pod install` after installation if needed
+
+#### Android
+- The library will be automatically linked
+- No additional configuration required
+
+### 3. Manual Linking (if needed)
+
+If autolinking doesn't work or you're using an older React Native version:
+
+#### iOS Manual Setup
+Add this to your `ios/Podfile`:
 
 ```ruby
 pod 'react-native-big-media-loader', :path => '../node_modules/react-native-big-media-loader'
 ```
 
 Then run:
-
 ```bash
 cd ios && pod install
 ```
 
-### 3. Android Setup
+#### Android Manual Setup
+Add this to your `android/settings.gradle`:
 
-For Android, the library should be automatically linked. If you're using React Native 0.60+, no additional setup is required.
+```gradle
+include ':react-native-big-media-loader'
+project(':react-native-big-media-loader').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-big-media-loader/android')
+```
+
+And this to your `android/app/build.gradle`:
+
+```gradle
+dependencies {
+    implementation project(':react-native-big-media-loader')
+}
+```
+
+And this to your `MainApplication.java`:
+
+```java
+import com.yourorg.bigmedialoader.BigMediaLoaderPackage;
+
+// In getPackages() method:
+packages.add(new BigMediaLoaderPackage());
+```
 
 ## Usage
 
@@ -337,6 +372,26 @@ See the `example/` directory for a complete demonstration app that shows:
 ### Debugging
 
 Enable React Native debugging to see detailed error messages from the native modules.
+
+### Troubleshooting Autolinking
+
+If autolinking doesn't work:
+
+1. **Check React Native version**: Ensure you're using React Native 0.60+
+2. **Clean and rebuild**:
+   ```bash
+   # iOS
+   cd ios && rm -rf Pods && pod install
+   
+   # Android
+   cd android && ./gradlew clean
+   ```
+3. **Reset Metro cache**:
+   ```bash
+   npx react-native start --reset-cache
+   ```
+4. **Check react-native.config.js**: Ensure the configuration is correct
+5. **Manual linking**: Use the manual linking instructions above
 
 ## Contributing
 

@@ -59,5 +59,13 @@
     "ios",
     "android",
     "react-native.config.js"
-  ]
+  ],
+  "react-native": {
+    "ios": {
+      "podspec": "ios/BigMediaLoader.podspec"
+    },
+    "android": {
+      "sourceDir": "android"
+    }
+  }
 }
