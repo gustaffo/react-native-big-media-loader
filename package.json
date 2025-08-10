@@ -31,11 +31,11 @@
     "image-picker",
     "video-picker"
   ],
-  "author": "Your Name <you@example.com>",
+  "author": "Gustaffo <office@gustaffo.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourorg/react-native-big-media-loader.git"
+    "url": "https://github.com/gustaffo/react-native-big-media-loader.git"
   },
   "peerDependencies": {
     "react": "*",
